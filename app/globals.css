@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box; /* Makes padding/border included in element's width/height */
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f4f4f4;
+
+  font-family: Arial, Helvetica, sans-serif; /* Fallback fonts are essential */
+  color: #333; /* Default text color */
+  line-height: 1.6; /* Improves readability */
+}
+.btn {
+  display: inline-block;
+  background-color: #5c9d88; /* Subtle background color for buttons */
+  color: #ffffff; /* Text color is black (overridden below for visibility) */
+  padding: 7px 15px;
+  border-radius: 20px; /* Highly rounded corners */
+  font-size: 0.95em;
+  font-weight: 600; /* White text */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline if using <a> as a button */
+  transition: background 0.1s ease; /* Smooth hover effect */
+}
+
+.btn:hover {
+  background: #86e0c2;
+    box-shadow: 0 4px 8px #86e0c276;
+    transform: translateY(-1px); 
+}
+.navbar {
+    /* Floating/Sticky properties */
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0; /* Stays at the top edge of the viewport */
+    z-index: 1000; /* Ensures it stays above all other content */
+
+    /* Aesthetic properties for "floating" look */
+    background-color: #ffffff; /* Semi-transparent white/light background */
+    border-radius: 12px; /* Rounded corners for the entire bar */
+    margin: 10px 20px; /* Space around the bar to make it "float" visually */
+    box-shadow: 0 4px 15px #90caaa; /* Soft shadow for depth */
+
+    /* Flex layout (from previous steps) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+/* --- Logo/Title Styling --- */
+.logo a {
+    color: #333; /* Black text for contrast against light bar */
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/* --- Link List Layout --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    /* Button appearance */
+    display: block;
+    text-decoration: none;
+
+    /* Custom color and shape */
+    background-color: #5c9d88; /* Subtle background color for buttons */
+    color: #ffffff; /* Text color is black (overridden below for visibility) */
+    padding: 7px 15px;
+    border-radius: 20px; /* Highly rounded corners */
+    font-size: 0.95em;
+    font-weight: 600;
+    
+    /* Text color fix: setting the actual text to black (or white if background is dark) */
+    color: #fff; /* White text looks better on the dark gray button background */
+    
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #86e0c2; /* Primary color on hover */
+    box-shadow: 0 4px 8px #86e0c276;
+    transform: translateY(-1px);
+}
+.search-container {
+  display: flex; /* Aligns input and button (if any) horizontally */
+  padding: 5px 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #5cfcff; /* Highlight border on focus */
+}
+
+.html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+}
+.section {
+  height: 100vh; /* full-screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #000;
+}
+
