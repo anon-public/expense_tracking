@@ -1,6 +1,14 @@
+
+
+
+
+
 const Dashboard = () => {
     return(
-        <div>Dashboard</div>
+        <a className="search-input">Search Expenses </a>
     )
 }
 export default Dashboard;
+
+
+

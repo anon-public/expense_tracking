@@ -51,11 +51,15 @@ body {
 }
 
 /* --- Logo/Title Styling --- */
-.logo a {
-    color: #333; /* Black text for contrast against light bar */
-    text-decoration: none;
-    font-size: 1.6em;
-    font-weight: 700;
+@media (max-width: 768px) {
+  .logo img {
+    height: 30px; /* Smaller logo on mobile devices */
+  }
+}
+.logo img {
+  height: 40px; /* Adjust this value to your preferred logo height */
+  width: auto; /* This maintains the aspect ratio */
+  margin-right: 10px;
 }
 
 /* --- Link List Layout --- */
@@ -74,15 +78,15 @@ body {
     text-decoration: none;
 
     /* Custom color and shape */
-    background-color: #5c9d88; /* Subtle background color for buttons */
-    color: #ffffff; /* Text color is black (overridden below for visibility) */
+    background-color: #2c2b2b1a; /* Subtle background color for buttons */
+    color: #3e3e3e9d; /* Text color is black (overridden below for visibility) */
     padding: 7px 15px;
     border-radius: 20px; /* Highly rounded corners */
     font-size: 0.95em;
     font-weight: 600;
     
     /* Text color fix: setting the actual text to black (or white if background is dark) */
-    color: #fff; /* White text looks better on the dark gray button background */
+    color: #3e3e3e6b; /* White text looks better on the dark gray button background */
     
     transition: all 0.2s ease;
 }
@@ -115,7 +119,7 @@ body {
     scroll-padding-top: 64px;
 }
 .section {
-  height: 100vh; /* full-screen height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -7,7 +7,10 @@ const Navbar = () =>{
 
 return(
 <nav className="navbar">
-    <h2 className="text 1xl">Expense Tracking & Budgeting</h2>
+    <a href="/" className="logo">
+    <img src="/Expent_logo.png" alt = "Logo"/>
+    </a>
+    <h2 className="text 3xl">Expent</h2>
 
 <ul className="nav-links">
     <li><a href ="#Home">Home</a></li>
