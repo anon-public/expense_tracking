@@ -1,19 +1,21 @@
+import SearchBar from "@/components/SearchBar";
 
 
-
-
-
-const Dashboard = () => {
+export default function Dashboard({searchParams}:{
+    searchParams: { query? : string}
+})  {
     return(
          <section className="d-container">
+            
             <div className="card-stats">
-                <div className="card-text">Allocated Bugget</div>
+                <p className="card-text">Allocated Bugget</p>
+                <SearchBar query={searchParams.query || ''} />
                     <div className="card-category">SAMPLE</div>
-                </div>
+                </div>            
          </section>
     )
 }
-export default Dashboard;
+
 
 
 

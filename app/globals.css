@@ -115,7 +115,7 @@ body {
   max-width: 100rem;
   max-height: 40rem;
   min-height: 5rem;
-  height: 6rem;
+  height: 12rem;
   margin: 0 auto;
   padding: 3.5rem ;
   border-radius: 0.5dvh;
@@ -130,12 +130,12 @@ body {
   background-size: 100% 10px;
 }
 .card-stats{
-  background-color: #19764a;
+  background-color: #068047a8;
   max-width: 60rem;
   max-height: 10rem;
   min-height: 3rem;
   height: 5rem;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 2rem ;
   border-radius: 1dvh;}
 .card-text{
@@ -154,10 +154,66 @@ body {
   min-height: 6rem;
   height: 4rem;
   padding: 4rem;
+  margin : 30px;
   border-radius: 4dvh;
 }
 .card-category:hover{
   transform: translateY(-1px);
   box-shadow: 0 4px 8px #909090;
 }
+/* -------------------Search Bar Style -------------------- */
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border: 2px solid #1f2937;
+  border-radius: 30px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin : 8px auto;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-radius : 30px;
+  font-size: 16px;
+  margin : 6px;
+  transition: all 0.2s;
+}
+.search-btn{
+  background-color: #000000;
+  color : #ffffff;
+  border-radius : 9999px;
+  padding : 8px 12px;
+  margin : 8px;
+  font-weight: bold;
+  border:none ;
+  outline : none;
+  text-decoration:none;
+  cursor :pointer;
+}
+.submit-btn{
+    background-color: #000000;
+  color : #ffffff;
+  border-radius : 9999px;
+  padding : 7px 30px;
+  margin : 8px;
+  font-weight: bold;
+  border:none ;
+  outline : none;
+  text-decoration:none;
+  cursor :pointer;
+}
+
+
+
+
 
