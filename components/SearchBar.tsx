@@ -11,11 +11,9 @@ const sample_data = [
 const SearchBar = (props: { query: string }) =>{
        const query = "Expense";                
 
-
     return(
         <Form action = "/" scroll = {false} className="search-bar">
                 <input
-
                 name = "query"
                 defaultValue = {query}
                 placeholder = "Track Expenses"

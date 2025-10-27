@@ -119,32 +119,33 @@ body {
   margin: 0 auto;
   padding: 3.5rem ;
   border-radius: 0.5dvh;
-  background: #095331;
+  background: #44bca6;
   background-image: repeating-linear-gradient(
     90deg,
     #ffffff 0,
-    #00953b6c 0px,
+    #ffffff6c 0px,
     transparent 1px,
     transparent 40px
   );
   background-size: 100% 10px;
 }
 .card-stats{
-  background-color: #068047a8;
+  background-color: #a6c9566f;
   max-width: 60rem;
   max-height: 10rem;
   min-height: 3rem;
-  height: 5rem;
-  margin: 5px auto;
-  padding: 2rem ;
-  border-radius: 1dvh;}
+  height: 5.7rem;
+  margin: 10px auto;
+  padding: 0.5rem ;
+  border-radius: 1dvh;
+  box-shadow: 1px 1px 1px #00000097;}
 .card-text{
   color: #ffffff;
-  font-size: 1rem;
-  padding: 1rem;
-  text-align : center;
+  font-size: 16px;
+  padding: 0px;
+  margin : 0 auto;
+  font-weight:700;
 }
-
 
 .card-category{
   background-color: #ffffff;
@@ -189,7 +190,7 @@ body {
   transition: all 0.2s;
 }
 .search-btn{
-  background-color: #000000;
+  background-color: #ff9855;
   color : #ffffff;
   border-radius : 9999px;
   padding : 8px 12px;
@@ -201,19 +202,152 @@ body {
   cursor :pointer;
 }
 .submit-btn{
-    background-color: #000000;
+    background-color: #ff9855;
   color : #ffffff;
   border-radius : 9999px;
   padding : 7px 30px;
   margin : 8px;
   font-weight: bold;
   border:none ;
-  outline : none;
+  outline-color: #c5c5c561;
+  outline-style:solid;
   text-decoration:none;
   cursor :pointer;
 }
+/* -------------------Add Expense Button---------------- */
+.exp-btn{
+  position : absolute;
+  right : 55px;
+  top  :550px;
+  height: 45px;
+  width : 45px;
+  background-color:#5c9d88 ;
+  border-radius: 9999px;
+  color : #ffffff;
+  font-size  :32px;
+}
+.exp-btn:hover{
+  background-color: #86e0c2;
+  transform : translateY(-1px);
+  box-shadow: 2px 2px 0px #333333;
+}
+/* -----------------Add Expense Popup-------------------------- */
+.popup-base {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 50;
+}
+.popup-content {
+  width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.toggle-bar {
+  display: inline-flex;
+  background: #f1f4f5;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 12px;
+  max-width: 22rem;
+  width:100%;
+  align-self: start;
+}
+.toggle-btn {
+  background: #ff99550a;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #666;
+    max-width: 22rem;
+  width:100%;
+  font-weight: 600;
+}
+.toggle-btn.active {
+  background: #2fbf9b; /* green-ish */
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(47,191,155,0.25);
+}
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-
-
-
-
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #333;
+}
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group select {
+  padding: 8px 10px;
+  border: 1px solid #d6dfe3;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #8ad6bf;
+  box-shadow: 0 0 0 3px rgba(47,191,155,0.12);
+}
+.add-new-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.small-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #cfd8db;
+  background: #f7f9fa;
+  cursor: pointer;
+}
+.small-btn.alt {
+  background: #fff;
+}
+.popup-btn {
+  background-color: #ff9855;
+  color : #ffffff;
+  border-radius : 9999px;
+  padding : 10px 45px;
+  width:100%;
+  max-width: 22rem;
+  margin : 8px;
+  font-weight: bold;
+  border:none ;
+  text-decoration:none;
+  cursor :pointer;
+}
+.error {
+  color: #b00020;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.mode-info {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  color: #666;
+  font-size: 13px;
+}
