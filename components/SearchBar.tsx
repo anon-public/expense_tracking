@@ -9,10 +9,10 @@ const sample_data = [
 ]
 
 const SearchBar = (props: { query: string }) =>{
-       const query = "Expense";                
+    const { query } = props;               
 
     return(
-        <Form action = "/" scroll = {false} className="search-bar">
+        <Form action = "/dashboard" scroll = {false} className="search-bar">
                 <input
                 name = "query"
                 defaultValue = {query}

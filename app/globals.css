@@ -129,7 +129,7 @@ body {
   );
   background-size: 100% 10px;
 }
-/* --------------------------Expense Card Style -------------------- */
+/* ----------------------Stats Card Style --------------------  */
 .card-stats{
   background-color: #a6c9566f;
   max-width: 60rem;
@@ -147,21 +147,67 @@ body {
   margin : 0 auto;
   font-weight:700;
 }
-
-.card-category{
+/* --------------------------Expense Card Style -------------------- */
+.card_grid{
+  display: grid;
+  gap:1.25rem;
   background-color: #ffffff;
   border: 0.19rem solid #000000;
-  max-width: 12rem;
-  max-height: 25rem;
-  min-height: 6rem;
-  height: 4rem;
-  padding: 4rem;
-  margin : 30px;
-  border-radius: 4dvh;
+  border-radius: 3dvh;
+  box-shadow : 2px 2px 0px #000000;
+grid-template-columns: (1,minmax(0,1fr));}
+
+@media(min-width:640px){
+  .card_grid{
+  grid-template-columns: (2,minmax(0,1fr));
+}}
+@media(min-width:786px){
+  .card_grid{
+  grid-template-columns: (3,minmax(0,1fr));
+}}
+.card_grid-text{
+  color:#000000;
+  font-size:12px; 
+  margin :0px 30px;
 }
-.card-category:hover{
+.card_grid:hover{
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px #909090;
+  box-shadow: 0 4px 8px #86e0c2;
+}
+.heading{
+ font-size: 20px;
+ text-align:left; 
+ font-weight: semibold;}
+.card_grid-head{
+  font-size:20px;
+  text-align: left;
+  color:#000000;
+  font-weight: semibold;
+  margin-top: 1px;
+  padding :2px;
+}
+.card_grid-noresult{
+  font-size:20px;
+  text-align: left;
+  color:#000000;
+  text-align: center;
+  font-weight: semibold;
+  margin-top: 15px;
+  padding :10px;
+}
+.card_grid-input{
+    color: #000000;
+    font-size: 15px;
+}
+.label {
+  color:#333;
+  font-size: 15px;
+  font-weight:600;
+}
+.card_grid-details{
+  display:flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 /* -------------------Search Bar Style -------------------- */
 
@@ -177,6 +223,7 @@ body {
   align-items: center;
   gap: 8px;
   margin : 8px auto;
+
 }
 
 .search-input {
@@ -269,9 +316,10 @@ body {
   border-radius: 999px;
   cursor: pointer;
   color: #666;
-    max-width: 22rem;
+  max-width: 22rem;
   width:100%;
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 .toggle-btn.active {
   background: #2fbf9b; /* green-ish */
@@ -284,7 +332,7 @@ body {
   top: 10px;
   border: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
 }
 
