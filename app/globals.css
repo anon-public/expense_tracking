@@ -198,6 +198,8 @@ grid-template-columns: (1,minmax(0,1fr));}
 .card_grid-input{
     color: #000000;
     font-size: 15px;
+    text-decoration: none;
+    padding  :2px ;
 }
 .label {
   color:#333;
@@ -206,8 +208,7 @@ grid-template-columns: (1,minmax(0,1fr));}
 }
 .card_grid-details{
   display:flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  gap: 1px;
 }
 /* -------------------Search Bar Style -------------------- */
 

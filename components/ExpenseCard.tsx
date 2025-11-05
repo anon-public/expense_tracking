@@ -13,15 +13,15 @@ const ExpenseCard = ({ post } : {post:ExpenseCardType} ) => {
                 </div>
                 <div className="card_grid-details">
                     <span className="label"> Category:</span> 
-                    <span  className="card_grid-input">{ post.category }</span>
+                    <span  className="card_grid-input"><a href={`/dashboard?query=${post.category}`} className="card_grid-input">{ post.category }</a></span>
                 </div>
-                <div className="caard_grid-details">
+                <div className="card_grid-details">
                     <span className="label"> Amount:</span> 
-                    <span  className="card_grid-input">{ post.amount }</span>
+                    <span  className="card_grid-input"><a href={`/dashboard?query=${post.amount}`} className="card_grid-input">{ post.amount }</a></span>
                 </div>
-                <div className="caard_grid-details">
+                <div className="card_grid-details">
                     <span className="label"> Occured At:</span> 
-                    <span  className="card_grid-input">{ post.date }</span>
+                    <span  className="card_grid-input"><a href={`/dashboard?query=${post.date}`} className="card_grid-input">{ post.date }</a></span>
                 </div>
             </div>
         </li>

@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     icon: "/favicon/favicon.ico",
     shortcut: "/favicon/favicon.ico",
     apple: "/favicon/favicon.ico"
-  }
+  },
+  viewport : "width=device-width, initial-scale=1.0, maximum-scale=1.0"
 };
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
