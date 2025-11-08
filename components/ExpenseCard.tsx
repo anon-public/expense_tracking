@@ -1,9 +1,7 @@
 import { ExpenseCardType } from '@/types/index';
-import Link from "next/link";
 
 const ExpenseCard = ({ post } : {post:ExpenseCardType} ) => {
-    const {_createdAT,title,description,date,amount,category} = post;
-    
+  
     return(
         <li className="card_grid-text">
             <div className="flex-between">

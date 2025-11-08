@@ -1,4 +1,4 @@
-export type ExpenseCardType = {
+export interface ExpenseCardType {
     _id: number;
     _createdAT: string;
     title: string;
