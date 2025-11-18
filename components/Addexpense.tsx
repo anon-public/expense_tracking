@@ -1,24 +1,51 @@
 "use client";
 import { ExpenseCardType } from "@/types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 
 interface AddexpenseProps {
     isopen : boolean;
     onclose : () => void;
     onSave : (expense: ExpenseCardType) => void;
+    editingExpense?: ExpenseCardType | null;
+    onUpdate?: (expense: ExpenseCardType) => void;
 }
 const items = ["Food", "Transport", "Utilities", "Entertainment", "Healthcare", "Other"];
-const Addexpense: React.FC<AddexpenseProps> = ({isopen,onclose,onSave}) => {
+const Addexpense: React.FC<AddexpenseProps> = ({isopen,onclose,onSave,editingExpense,onUpdate}) => {
     if(!isopen){ return null;}
 
     const predefined = items;
-    const [amount, setAmount] = useState<number | "">("");
+    const [amount, setAmount] = useState<number | "">(editingExpense?.amount ?? "");
     const [error, setError] = useState<string | null>(null);
     const [categories, setCategories] = useState<string[]>(predefined);
-    const [category, setCategory] = useState<string>(predefined[0]);
+    const [category, setCategory] = useState<string>(editingExpense?.category ?? predefined[0]);
     const [addingNew, setAddingNew] = useState(false);
     const [newCategory, setNewCategory] = useState("");
     const [inputMode, setInputMode] = useState<"text" | "voice">("text");
+    const [description, setDescription] = useState<string>(editingExpense?.description ?? "");
+
+    useEffect(() => {
+        if(editingExpense){
+            setAmount(editingExpense.amount);
+            setCategory(editingExpense.category);
+            setDescription(editingExpense.description);
+            setAddingNew(false);
+            setNewCategory("");
+            setError(null);
+            setvoicetext("");
+        }else{
+            setAmount("");
+            setCategory(predefined[0]);
+            setDescription("");
+            setAddingNew(false);
+            setNewCategory("");
+            setError(null);
+            setvoicetext("");
+        }
+
+    } , [editingExpense]);
+
+
 
     const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
@@ -89,20 +116,27 @@ const Addexpense: React.FC<AddexpenseProps> = ({isopen,onclose,onSave}) => {
         return;
     }
         const post:ExpenseCardType  = {
-            _id: Date.now(),
-            _createdAT: new Date().toLocaleDateString("ban", {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
+            _id: editingExpense?._id ?? Date.now(),
+            _createdAT: editingExpense?._createdAT ?? new Date().toLocaleTimeString("ban", {
+                hour: "2-digit",
+                minute : "2-digit"
             }),
             title: `Voice Expense - ${foundcategory || "Other"}`,
             amount: voiceamount,
             category: foundcategory || "Other",
             description: voicetext,
-            date: new Date().toISOString()}
+            date: editingExpense?.date ?? new Date().toLocaleDateString("ban",{
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            })}
         console.log("Saved Expense");
         setvoicetext("");
-        onSave(post);
+        if(editingExpense && onUpdate) {
+            onUpdate(post);
+        } else {
+            onSave(post);
+        }
         onclose();
         return;
         }
@@ -120,23 +154,32 @@ const Addexpense: React.FC<AddexpenseProps> = ({isopen,onclose,onSave}) => {
             return;
         }
         const post:ExpenseCardType  = {
-            _id: Date.now(),
-            _createdAT: new Date().toLocaleDateString("ban", {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
+            _id: editingExpense?._id ?? Date.now(),
+            _createdAT: editingExpense?._createdAT ?? new Date().toLocaleTimeString("ban", {
+                
+                hour: "2-digit",
+                minute : "2-digit"
             }),
             title: `Expense - ${chosenCategory || "Other"}`,
             amount: amount as number,
             category: chosenCategory || "Other",
-            description: voicetext,
-            date: new Date().toISOString()}
+            description: description,
+            date: editingExpense?.date ?? new Date().toLocaleDateString("ban",{
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            })}
         setAmount("");
         setCategory(categories[0] ?? "");
         setAddingNew(false);
         setNewCategory("");
+        setDescription("");
         setError(null);
-        onSave(post);
+        if(editingExpense && onUpdate) {
+            onUpdate(post);
+        } else {
+            onSave(post);
+        }
         onclose();
         return;
     };
@@ -202,7 +245,7 @@ return (
             <button className="close-btn" onClick={onclose}>
                 &times;
             </button>
-            <h3>Add Expense</h3>
+            <h3>{editingExpense ? "Edit Expense" : "Add Expense"}</h3>
             {inputMode == "text" && (
                 <form onSubmit={handleSubmit}>
                 <div className="form-group">

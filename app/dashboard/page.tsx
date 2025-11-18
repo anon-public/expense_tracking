@@ -27,12 +27,30 @@ export default function Dashboard(
     setFilteredPosts(filtered);},[searchParams.query]);
     const[istabopen , setistabopen] = useState(false);
     const [expense, setexpenses] = useState<ExpenseCardType[]>([]);
+    const [editingexpense,seteditingexpense] = useState<ExpenseCardType | null>(null);
     const togglepopup = () => {
         setistabopen(!istabopen);};
         
     const handleaddexpense = (newexpense: ExpenseCardType )=>{
         setexpenses(prev => [newexpense,...prev]);
     };
+    const handleeditexpense  = (expensetoedit: ExpenseCardType) =>{
+        seteditingexpense(expensetoedit);
+        setistabopen(true);
+    }
+    const handleupdatedexpense = (updatedexpense : ExpenseCardType) =>{
+        setexpenses(prevexpenses => prevexpenses.map(expense =>expense._id === updatedexpense._id ? updatedexpense : expense));
+        seteditingexpense(null);
+        setistabopen(false);
+    }
+    const handleDeleteExpense = (id: number) => {
+    setexpenses(prevExpenses => prevExpenses.filter(exp => exp._id !== id));
+};
+
+const handleclosepopup = () =>{
+    setistabopen(false);
+    seteditingexpense(null);
+}
 
     return(
         <>
@@ -49,19 +67,28 @@ export default function Dashboard(
                     <p className={"heading"}>
                             {query ? `Search results for "${query}"` :"All Expenses"}
                     </p>
-        <ul className="card_grid">
+        <ul className="card layout">
             {query ? (
                 filteredPosts.length > 0 ? (
                     filteredPosts.map((expense) => (
-                        <ExpenseCard key={expense._id} post={expense} />
-                    ))
+    <ExpenseCard 
+        key={expense._id} 
+        post={expense}
+        onDelete={handleDeleteExpense}
+        onEdit = {handleeditexpense}
+    />
+))
                 ) : (
                     <p className="card_grid-noresult">No expenses found</p>
                 )
             ) : (
                 expense.length > 0 ? (
                 expense.map((expense) => (
-                    <ExpenseCard key={expense._id} post={expense} />
+                    <ExpenseCard 
+                    key={expense._id} 
+                    post={expense}
+                    onDelete={handleDeleteExpense}
+                    onEdit={handleeditexpense} />
                 ))
             ) : (<p className="card_grid-noresult">Ready to add your expenses</p>)
         )}
@@ -69,7 +96,12 @@ export default function Dashboard(
             </section>
                 <div>
                     <button className="exp-btn" onClick={togglepopup} >+</button>
-                {istabopen && (<Addexpense isopen={istabopen} onclose={() => setistabopen(false)} onSave={(handleaddexpense)}/>)}
+                {istabopen && (<Addexpense isopen={istabopen} 
+                onclose={() => setistabopen(false)} 
+                onSave={(handleaddexpense)}
+                editingExpense={editingexpense}
+                onUpdate={handleupdatedexpense}
+                    />)}
                 </div>
             </section>
 
