@@ -5,7 +5,6 @@ import Addexpense from "@/components/Addexpense";
 import ExpenseCard from "@/components/ExpenseCard";
 import { ExpenseCardType } from '@/types/index';
 
-
 export default function Dashboard(
     props: {
         searchParams: Promise<{ query? : string}>
@@ -28,6 +27,7 @@ export default function Dashboard(
     const[istabopen , setistabopen] = useState(false);
     const [expense, setexpenses] = useState<ExpenseCardType[]>([]);
     const [editingexpense,seteditingexpense] = useState<ExpenseCardType | null>(null);
+    const [settingsTAB,setsettingsTAB] = useState(false);
     const togglepopup = () => {
         setistabopen(!istabopen);};
         
@@ -47,20 +47,17 @@ export default function Dashboard(
     setexpenses(prevExpenses => prevExpenses.filter(exp => exp._id !== id));
 };
 
-const handleclosepopup = () =>{
-    setistabopen(false);
-    seteditingexpense(null);
-}
+
 
     return(
-        <>
+        <body>
        <section className="d-container">           
             <div className="card-stats">
                 <section className="card-text">
-                    <p>Allocated Budget</p>
-                    <p>Remaining Budget:</p>
+                    <p>Total Allocated Budget:</p>
+                    <p>Total Remaining Budget:</p>
                     <p>Total Expenses: ${expense.reduce((sum,exp)=>sum + exp.amount,0).toFixed(2)}</p>
-                </section>
+               </section>
                 </div>     
                 <SearchBar query={query} />
                 <section>
@@ -106,5 +103,5 @@ const handleclosepopup = () =>{
             </section>
 
 
-</>);
+</body>);
 }

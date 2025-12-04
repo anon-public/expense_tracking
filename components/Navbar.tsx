@@ -15,7 +15,7 @@ return(
 <ul className="nav-links">
     <li><a href ="#Home">Home</a></li>
     <li><a href ="#Features">Features</a></li>
-    <li><a href ="#Feedback">Feedback</a></li>
+    <li><a href ="#Insights">Insights</a></li>
 </ul>
  <div>
         {!session ? (
