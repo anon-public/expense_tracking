@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./global.css";
-import Providers from "./provider";
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: "Expent",
@@ -11,14 +13,17 @@ export const metadata: Metadata = {
     apple: "/favicon/favicon.ico"
   },
 };
+
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
+      <ClerkProvider>
     <html lang="en">
       <body>
-        <Providers>
+        <main>
           {children}
-        </Providers>
+        </main>
       </body>
     </html>
+    </ClerkProvider>
   );
 }

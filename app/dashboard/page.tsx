@@ -50,7 +50,7 @@ export default function Dashboard(
 
 
     return(
-        <body>
+        <>
        <section className="d-container">           
             <div className="card-stats">
                 <section className="card-text">
@@ -103,5 +103,5 @@ export default function Dashboard(
             </section>
 
 
-</body>);
+</>);
 }

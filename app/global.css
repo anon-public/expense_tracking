@@ -425,10 +425,6 @@ font-size: 0.9rem;
     transform: translateY(-1px);
 }
 
-
-.html {
-    scroll-behavior: smooth;
-}
 .section {
   height: 100vh;
   display: flex;
@@ -476,7 +472,6 @@ font-size: 0.9rem;
   font-weight:700;
 }
 /* --------------------------Expense Card Style -------------------- */
-/* Category Colors and Styles */
 .food-badge {
     background-color: #dcfce7;
     color: #166534;
@@ -502,7 +497,6 @@ font-size: 0.9rem;
     color: #92400e;
 }
 
-/* Icon Colors */
 .icon-food {
     color: #16a34a;
 }
@@ -523,7 +517,7 @@ font-size: 0.9rem;
     color: #ea580c;
 }
 
-/* Border Colors */
+
 .border-food {
     border-left: 4px solid #16a34a;
 }
@@ -543,8 +537,6 @@ font-size: 0.9rem;
 .border-other {
     border-left: 4px solid #ea580c;
 }
-
-/* Expense Card Styles */
 .expense-card-item {
     list-style: none;
     margin-bottom: 1rem;
@@ -562,8 +554,6 @@ font-size: 0.9rem;
 .expense-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
-/* Card Top Section */
 .card-top-section {
     display: flex;
     justify-content: space-between;
@@ -594,7 +584,6 @@ font-size: 0.9rem;
     font-weight: 500;
 }
 
-/* Card Actions */
 .card-actions {
     display: flex;
     gap: 0.5rem;
@@ -630,7 +619,6 @@ font-size: 0.9rem;
     border-color: #3498db;
 }
 
-/* Amount Section */
 .card-amount-section {
     margin-bottom: 0.75rem;
 }
@@ -642,7 +630,6 @@ font-size: 0.9rem;
     margin: 0;
 }
 
-/* Date Section */
 .card-date-section {
     display: flex;
     gap: 1rem;
@@ -932,6 +919,13 @@ font-size: 0.9rem;
   margin-top: 12px;
   color: #666;
   font-size: 13px;
+}
+/* ---------------------------Sign In Page ----------------------- */
+.center-container{
+  display: flex;
+  justify-content : center;
+  align-items: center;
+  height: 100vh;
 }
 
 html{

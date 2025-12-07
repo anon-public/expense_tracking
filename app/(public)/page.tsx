@@ -2,9 +2,7 @@ import Navbar from "@/components/Navbar";
 
 const Page = () =>{
   return (
-    
     <>
-    <Navbar />
         <section id="Home"  className="hero-section">
         <div className="container">
           <div className="hero-grid">
@@ -104,11 +102,11 @@ const Page = () =>{
                  <h4>Try it. You'll forget other apps exist.</h4>
                 <ul className="final-content">
                   <li><span className="final-icon">√</span> Free to start, no credit card</li>
-                  <li><span className="final-icon">√ </span>Works in 30 seconds</li>
-                  <li><span className="final-icon ">√</span> Something ....</li>
+                  <li><span className="final-icon">√</span> Works in 30 seconds</li>
+                  <li><span className="final-icon">√</span> Something ....</li>
                 </ul>
-                </div>
-                <button className="btn " >Sign In & Start Tracking</button>
+              </div>
+              <a href="/sign-in" className="btn">Sign In & Start Tracking</a>
               
             </div>
           </section>
@@ -153,7 +151,7 @@ const Page = () =>{
 
                 <div className="footer-bottom">
                 <div  className="footer-copy">
-                  ©<p id="year">2025 </p>Expent.co All rights reserved.
+                  ©<p id="year">2025</p><p>Expent.co All rights reserved.</p>
                 </div>
                 <div className="footer-links">
                   <a href="#Privacy Policy" >Privacy Policy</a>
@@ -165,7 +163,7 @@ const Page = () =>{
             </div>
         </footer>
 <script>
-  document.getElementByID('year').textContent = new Date.getFullYear();
+ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </>
   )
