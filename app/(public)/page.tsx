@@ -46,6 +46,7 @@ const Page = () =>{
           <section id="Insights" className="insights-section">
             <div className="container">
               <div className="insights-grid">
+                <div className="insights-block">
                 <div className="insights-content">
                   <h4>AI Analysis of your expenses</h4>
                   <p >Proactive insights to stop overspending.</p>
@@ -55,6 +56,8 @@ const Page = () =>{
                   <img src="https://placehold.co/400x300/f2fcf9/44bca6?text=Visual:+AI+Insights" alt="AI Insights Visual" />
                 </div>
                  </div>
+                 </div>
+                 <div className="insights-block">
                 <div className="insights-content">
                   <h4>Learns your habits</h4>
                   <p>The more you use it, the smarter and more personalized it gets.</p>
@@ -65,6 +68,7 @@ const Page = () =>{
                  </div>
               </div>
               <a href="#Points" className="sub-text-link">One more thing <span className="sub-arrow">↓</span></a>
+            </div>
             </div>
           </section>
 
@@ -120,7 +124,7 @@ const Page = () =>{
                     <img src="/Expent_logo.png" alt="logo" className="w-8 h-8"/>
                     <span>Expent</span>
                     <p className="footer-tag">
-                      Stop stressing about spreadsheets. The AI-powered expense tracker that gives you instant clarity
+                      Stop stressing about spreadsheets.Expent AI-powered expense tracker that gives you instant clarity
                     </p>
                   </div>
               </div>

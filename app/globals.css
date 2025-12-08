@@ -34,7 +34,8 @@ body {
   cursor: pointer;
   border-radius: 5px; 
   text-decoration: none; 
-  transition: background 0.3s ease; 
+  transition:  0.3s ease; 
+  box-shadow: 0 2.5px 3px -3px var(--content-body);
 }
 .btn:hover {
   background-color: var(--secondary-color);
@@ -165,6 +166,12 @@ body {
 .insights-section{
   padding: var(--section-spc);
   background-color: var(--bg-alt);
+}
+.insights-block{
+  display : flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
 }
 .insights-grid{
   display: grid;
@@ -313,7 +320,7 @@ body {
 }
 .footer-tag{
   margin: 25px;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   max-width: 300px;
   color: #94a3b8;
 }
@@ -401,21 +408,16 @@ font-size: 0.9rem;
     margin-left: 20px;
 }
 
-.nav-links a {
-
+.desktop-menu a {
     display: block;
     text-decoration: none;
-
     background-color: #2c2b2b1a; 
     color: #3e3e3e9d;
     padding: 7px 15px;
     border-radius: 20px;
     font-size: 0.95em;
     font-weight: 600;
-    
-  
     color: #3e3e3e6b; 
-    
     transition: all 0.2s ease;
 }
 
@@ -424,7 +426,12 @@ font-size: 0.9rem;
     box-shadow: 0 4px 8px #86e0c276;
     transform: translateY(-1px);
 }
-
+.desktop-menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 .section {
   height: 100vh;
   display: flex;
@@ -433,6 +440,8 @@ font-size: 0.9rem;
   font-size: 1rem;
   color: #000;
 }
+.mobile-toggle{display: none;}
+.mobile-drop-down{display  :none;}
  /* -----------------DASHBOARD STYLE-------------------- */
 
 .d-container {
@@ -926,6 +935,99 @@ font-size: 0.9rem;
   justify-content : center;
   align-items: center;
   height: 100vh;
+}
+
+/* --------------------------------------Media Queries------------------------------------ */
+
+/* Tablet - Laptop */
+@media(max-width : 768px){
+  .container{width : 95%;}
+  .hero-grid{grid-template-columns: 1fr ;gap : 40px;}
+  .hero-content h1{font-size:2.5rem;}
+  .hero-card{height: 350px;}
+  .features-section{font-size: 2rem;}
+  .insights-section{font-size: 2rem;}
+  .footer-section{font-size: 2rem;}
+  .points-section{font-size: 2rem;}
+  .final-section{font-size: 2rem;}
+  .features-grid{grid-template-columns: 1fr;gap:40px;}
+  .insights-grid{grid-template-columns: 1fr;gap:40px;}
+  .points-grid{grid-template-columns: 1fr;gap:40px;}
+  .insights-block, .insights-block:nth-child(even){
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .small-card{font-size: 1.2rem;}
+  .insights-card{ width: 100%; padding : 30px;}
+  .review-card{padding: 30px;}
+  .review-content{font-size: 1.2rem;}
+  .final-content{font-size: 2.2rem;}
+  .final-icon{flex-direction: column;gap:15px;align-items: center;}
+  .btn{width: 100%; margin:0 auto;font-size: 1.1rem;}
+  .sub-text-link{font-size: 1rem;}
+
+  .footer-grid{grid-template-columns: 1fr;
+  gap:50px;text-align: center;}
+  .footer-tag{margin:0 auto 30px auto;line-height:30px;}
+  .footer-links{justify-content: center;}
+  .footer-bottom{flex-direction: column;gap:20px;}
+
+/* ------------------Navbar Mobile---------------------------- */
+.desktop-menu{display: none;}
+.mobile-toggle{
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color : var(--content-body);
+}
+.mobile-drop-down{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  width: 100%;
+  background-color: var(--bg--main);
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  animation: slideDown 0.3s ease-out;
+}
+.mobile-link{
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+.mobile-auth{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.mobile-btn{
+  text-align: center;
+  background-color: var(--primary-color);
+  color:var(--bg--main);
+  padding: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.mobile-user-box{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+@keyframes slideDown {
+  from{opacity : 0; transform: translateY(-10px);}
+  to {opacity: 1;transform: translateY(0px);}
+}
 }
 
 html{
