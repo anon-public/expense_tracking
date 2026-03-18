@@ -292,7 +292,6 @@ The complete, filterable, sortable ledger of every expense you've ever logged.
 - Filter by date range, category, and amount
 - Sort by newest, oldest, highest, lowest
 - Inline editing and deletion
-- Pagination for large expense histories
 
 <img width="1177" height="322" alt="image" src="https://github.com/user-attachments/assets/82f1e0c8-68eb-4dde-b9e8-81dda2f4c2ff" />
 
@@ -334,7 +333,7 @@ We are actively building an intelligent AI layer on top of SpendSense's core fun
 Ask questions in plain English — *"How much did I spend on food last month?"* or *"Show me my subscriptions I haven't used in 60 days."* Get instant, accurate answers without touching a filter.
 
 #### 📈 Spending Insights & Anomaly Detection
-SpendSense will proactively surface patterns and flag unusual charges before you even notice them. Think of it as having a personal CFO who never sleeps.
+Expent will proactively surface patterns and flag unusual charges before you even notice them. Think of it as having a personal CFO who never sleeps.
 
 #### 🔮 Monthly Budget Forecasting
 Based on your historical spending patterns, the AI will predict where you'll land at month's end — and suggest adjustments to hit your goals.
@@ -343,7 +342,7 @@ Based on your historical spending patterns, the AI will predict where you'll lan
 Stop manually tagging every expense. The AI will intelligently categorize transactions based on merchant name, amount, and context — and learn from your corrections.
 
 #### 📝 Natural Language Expense Logging
-Just type *"spent $14 on coffee this morning"* and SpendSense handles the rest. No forms, no dropdowns, no friction.
+Just say *"spent $14 on coffee this morning"* and Expent handles the rest. No forms, no dropdowns, no friction.
 
 #### 📊 Weekly AI Summary Report
 A beautifully formatted digest landing in your inbox every Monday — your spending week in review, written by AI, personalized for you.
