@@ -323,7 +323,7 @@ Create and manage the taxonomy of your spending life — from *🍕 Food* to *�
 
 > *This is where SpendSense goes from a good tool to an indispensable one.*
 
-We are actively building an intelligent AI layer on top of SpendSense's core functionality. Here's a preview of what's coming:
+We are actively building an intelligent AI layer on top of Expent's core functionality. Here's a preview of what's coming:
 
 <img width="1177" height="322" alt="image" src="https://github.com/user-attachments/assets/82f1e0c8-68eb-4dde-b9e8-81dda2f4c2ff" />
 
@@ -406,7 +406,7 @@ User Input (Chat / Voice)
 
 ## 🤝 Contributing
 
-We'd love your help making SpendSense even better. Here's how to get involved:
+We'd love your help making Expent even better. Here's how to get involved:
 
 ### Getting Started
 
