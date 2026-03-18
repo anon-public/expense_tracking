@@ -446,7 +446,7 @@ git push origin feature/your-feature-name
 
 ## 🌐 Deployment
 
-SpendSense is optimized for deployment on **[Vercel](https://vercel.com/)** — the makers of Next.js.
+Expent is optimized for deployment on **[Vercel](https://vercel.com/)** — the makers of Next.js.
 
 ### Deploy in One Click
 
