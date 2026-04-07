@@ -25,44 +25,44 @@
 
 ## 📖 Table of Contents
 
-- [✨ Overview](#-overview)
-- [🚀 Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Getting Started](#️-getting-started)
-- [🔐 Authentication](#-authentication)
-- [🖥️ Pages & Components](#️-pages--components)
-- [🤖 AI-Powered Features (Coming Soon)](#-ai-powered-features-coming-soon)
-- [🗺️ Roadmap](#️-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [ Overview](#-overview)
+- [ Features](#-features)
+- [ Tech Stack](#️-tech-stack)
+- [ Project Structure](#-project-structure)
+- [ Getting Started](#️-getting-started)
+- [ Authentication](#-authentication)
+- [ Pages & Components](#️-pages--components)
+- [ AI-Powered Features (Coming Soon)](#-ai-powered-features-coming-soon)
+- [ Roadmap](#️-roadmap)
+- [ Contributing](#-contributing)
+- [ License](#-license)
 
 ---
 
-## ✨ Overview
+##  Overview
 
-**Expent** is a modern, full-stack SaaS expense tracking web application designed to give individuals and teams complete clarity over their finances — without the friction.
+**Expent** is a modern, full-stack SaaS expense tracking web application designed to give individuals and teams complete clarity over their finances.
 
-Built on a **React + Next.js** foundation with **Clerk** for seamless authentication, Expent currently delivers a clean, fast, and intuitive expense management experience. But we're not stopping there.
+Built on a **React + Next.js** foundation with **Clerk** for seamless authentication, _Expent_ currently delivers a clean, fast, and intuitive expense management experience. But we're not stopping there.
 
-We're actively engineering a powerful **AI layer** that will transform Expent from a great tracker into a *proactive financial co-pilot* — one that surfaces insights, flags anomalies, forecasts trends, and speaks your financial language.
+We're actively engineering a powerful **AI layer** that will transform Expent from a great tracker into a *proactive financial asistant* one that surfaces insights, flags anomalies, forecasts trends, and speaks your financial language.
 
 
 ---
 
-## 🚀 Features
+##  Features
 
-### ✅ Currently Available
+###  Currently Available
 
 | Feature | Description |
 |---|---|
-| 🏠 **Landing Page** | Polished, conversion-optimized marketing page with clear CTAs |
-| 🔐 **Secure Auth** | One-click sign-up/sign-in via Clerk (Google, GitHub, Email) |
-| 📊 **Expense Dashboard** | Clean overview of your spending at a glance |
-| ➕ **Add & Manage Expenses** | Quickly log expenses with categories, dates, and description |
-| 🏷️ **Category Management** | Organize spending into custom categories |
-| 📱 **Responsive Design** | Fully functional across desktop, tablet, and mobile |
-| ⚡ **Fast Performance** | Next.js App Router with optimized rendering |
+|  **Landing Page** | Polished, conversion-optimized marketing page with clear CTAs |
+|  **Secure Auth** | One-click sign-up/sign-in via Clerk (Google, GitHub, Email) |
+|  **Expense Dashboard** | Clean overview of your spending at a glance |
+|  **Add & Manage Expenses** | Quickly log expenses with categories, dates, and description |
+|  **Category Management** | Organize spending into custom categories |
+| **Responsive Design** | Fully functional across desktop, tablet, and mobile |
+|  **Fast Performance** | Next.js App Router with optimized rendering |
 
 ---
 
@@ -71,7 +71,7 @@ We're actively engineering a powerful **AI layer** that will transform Expent fr
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -87,7 +87,6 @@ Clerk             — Authentication & user management
 ```
 Anthropic Claude  — Conversational AI & financial insights engine
 Vercel AI SDK     — Streaming AI responses in the UI
-Vector Database   — Semantic search over expense history
 ```
 
 ---
@@ -148,7 +147,7 @@ expense_tracking/
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -203,7 +202,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the SpendSense landing page. 🎉
+Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the SpendSense landing page. 
 
 ### 5. Build for Production
 
@@ -214,18 +213,18 @@ npm start
 
 ---
 
-## 🔐 Authentication
+##  Authentication
 
-Expent uses **[Clerk](https://clerk.com/)** for all authentication — a best-in-class auth solution that handles everything from social logins to session management.
+Expent uses **[Clerk](https://clerk.com/)** for all authentication a best auth solution that handles everything from social logins to session management.
 
 
 
 
 ### Supported Auth Methods
 
-- 📧 Email + Password
-- 🔗 Google OAuth
-- 🐙 GitHub OAuth
+-  Email + Password
+-  Google OAuth
+- GitHub OAuth
 - *More providers coming soon*
 
 ### Route Protection
@@ -245,9 +244,9 @@ export default clerkMiddleware(async (auth, req) => {
 
 ---
 
-## 🖥️ Pages & Components
+##  Pages & Components
 
-### 🏠 Landing Page (`/`)
+### Landing Page (`/`)
 
 The first impression that converts visitors into users. Built to be fast, beautiful, and clear.
 
@@ -255,9 +254,9 @@ The first impression that converts visitors into users. Built to be fast, beauti
 
 | Section | Description |
 |---|---|
-| **Hero** | Bold headline, sub-copy, CTA buttons, and product mockup |
-| **Features** | Three-column grid highlighting core capabilities |
-| **How It Works** | Simple 3-step visual explainer |
+| **Hero** | Bold headline, sub copy, CTA buttons, and product mockup |
+| **Features** | Three column grid highlighting core capabilities |
+| **How It Works** | Simple 3 step visual explainer |
 | **CTA Banner** | Final conversion push before footer |
 | **Footer** | Links, socials, and legal |
 
@@ -268,7 +267,7 @@ The first impression that converts visitors into users. Built to be fast, beauti
 
 ---
 
-### 📊 Dashboard (`/dashboard`)
+###  Dashboard (`/dashboard`)
 
 Your financial command center. At a glance, see exactly where your money is going.
 
@@ -277,14 +276,14 @@ Your financial command center. At a glance, see exactly where your money is goin
 - **`SummaryStats`** — Total spent this month, vs. last month, and top category
 - **`RecentExpenses`** — Last 5–10 expense entries with quick-edit
 - **`SpendingChart`** — Visual breakdown by category *(chart component)*
-- **`QuickAddExpense`** — One-click expense entry modal
+- **`QuickAddExpense`** — One click expense entry modal
 
 <img width="1342" height="577" alt="image" src="https://github.com/user-attachments/assets/6b39a6e0-227e-428b-a34b-5e7eed09257b" />
 
 
 ---
 
-### 📋 Expenses Page (`/expenses`)
+###  Expenses Page (`/expenses`)
 
 The complete, filterable, sortable ledger of every expense you've ever logged.
 
@@ -297,21 +296,21 @@ The complete, filterable, sortable ledger of every expense you've ever logged.
 
 ---
 
-### 🏷️ Categories Page (`/categories`)
+###  Categories Page (`/categories`)
 
 Create and manage the taxonomy of your spending life — from *🍕 Food* to *✈️ Travel* to *📦 Subscriptions*.
 
 ---
 
-### 🔑 Shared UI Components
+###  Shared UI Components
 
 | Component | Description |
 |---|---|
 | `Navbar` | Top navigation with user avatar, links, and mobile menu |
-| `Button` | Reusable button with variant support (primary, ghost, destructive) |
+| `Button` | Reusable button with variant support  |
 | `Modal` | Accessible dialog for forms and confirmations |
 | `Input` | Styled input with label, error state, and helper text |
-| `CategoryBadge` | Color-coded pill showing expense category |
+| `CategoryBadge` | Color coded pill showing expense category |
 | `ExpenseCard` | Single expense entry display card |
 
 
@@ -319,37 +318,37 @@ Create and manage the taxonomy of your spending life — from *🍕 Food* to *�
 
 ---
 
-## 🤖 AI-Powered Features (Coming Soon)
+##  AI-Powered Features (Coming Soon)
 
-> *This is where SpendSense goes from a good tool to an indispensable one.*
+> *This is where Expent goes from a good tool to an indispensable one.*
 
 We are actively building an intelligent AI layer on top of Expent's core functionality. Here's a preview of what's coming:
 
 <img width="1177" height="322" alt="image" src="https://github.com/user-attachments/assets/82f1e0c8-68eb-4dde-b9e8-81dda2f4c2ff" />
 
-### 🧠 Planned AI Capabilities
+###  Planned AI Capabilities
 
-#### 💬 Conversational Expense Assistant
-Ask questions in plain English — *"How much did I spend on food last month?"* or *"Show me my subscriptions I haven't used in 60 days."* Get instant, accurate answers without touching a filter.
+####  Conversational Expense Assistant
+Ask questions in plain English  *"How much did I spend on food last month?"* or *"Show me my subscriptions I haven't used in 60 days."* Get instant, accurate answers without touching a filter.
 
-#### 📈 Spending Insights & Anomaly Detection
+####  Spending Insights & Anomaly Detection
 Expent will proactively surface patterns and flag unusual charges before you even notice them. Think of it as having a personal CFO who never sleeps.
 
-#### 🔮 Monthly Budget Forecasting
-Based on your historical spending patterns, the AI will predict where you'll land at month's end — and suggest adjustments to hit your goals.
+####  Monthly Budget Forecasting
+Based on your historical spending patterns, the AI will predict where you'll land at month's end and will suggest adjustments to hit your goals.
 
-#### 🏷️ Automatic Categorization
-Stop manually tagging every expense. The AI will intelligently categorize transactions based on merchant name, amount, and context — and learn from your corrections.
+####  Automatic Categorization
+Stop manually tagging every expense. The AI will intelligently categorize transactions based on merchant name, amount, and context and will learn from your corrections.
 
-#### 📝 Natural Language Expense Logging
-Just say *"spent $14 on coffee this morning"* and Expent handles the rest. No forms, no dropdowns, no friction.
+####  Natural Language Expense Logging
+Just say *"spent $14 on coffee this morning"* and Expent handles the rest. No forms, no dropdowns.
 
-#### 📊 Weekly AI Summary Report
-A beautifully formatted digest landing in your inbox every Monday — your spending week in review, written by AI, personalized for you.
+####  Weekly AI Summary Report
+A beautifully formatted digest landing in your inbox every Monday your spending week in review, written by AI, personalized for you.
 
 ---
 
-### 🏗️ AI Architecture (Planned)
+###  AI Architecture (Planned)
 
 ```
 User Input (Chat / Voice)
@@ -372,9 +371,9 @@ User Input (Chat / Voice)
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
-### Phase 1 — Foundation ✅ *(Current)*
+### Phase 1 — Foundation  *(Current)*
 - [x] Landing page
 - [x] Clerk authentication
 - [x] Core dashboard UI
@@ -382,29 +381,29 @@ User Input (Chat / Voice)
 - [x] Category management
 - [x] Responsive design
 
-### Phase 2 — Data & Backend 🔄 *(In Progress)*
+### Phase 2 — Data & Backend  *(In Progress)*
 - [ ] Database integration (PostgreSQL / Supabase)
 - [ ] API routes for expense operations
 - [ ] User settings & profile page
 - [ ] Data export (CSV / PDF)
 
-### Phase 3 — AI Integration 🤖 *(Planned)*
+### Phase 3 — AI Integration  *(Planned)*
 - [ ] Conversational AI assistant
-- [ ] Auto-categorization engine
+- [ ] Auto categorization engine
 - [ ] Spending forecasting
 - [ ] Anomaly detection & alerts
 - [ ] Natural language expense logging
 
-### Phase 4 — Growth 🚀 *(Future)*
+### Phase 4 — Growth  *(Future)*
 - [ ] Team/shared expense tracking
 - [ ] Bank account integrations (Plaid)
 - [ ] Mobile app (React Native)
-- [ ] Multi-currency support
+- [ ] Multi currency support
 - [ ] Public API for developers
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We'd love your help making Expent even better. Here's how to get involved:
 
@@ -428,25 +427,25 @@ git push origin feature/your-feature-name
 
 ### Contribution Guidelines
 
-- Follow the existing code style (ESLint + Prettier configured)
+- Follow the existing code style 
 - Write descriptive commit messages following [Conventional Commits](https://www.conventionalcommits.org/)
 - Open an issue before starting work on large features
 - Add relevant comments for complex logic
 - Test your changes before submitting a PR
 
-### 🐛 Found a Bug?
+###  Found a Bug?
 
 [Open an issue](https://github.com/anon-public/expense_tracking/issues/new?template=bug_report.md) with steps to reproduce, expected behavior, and screenshots if possible.
 
-### 💡 Have an Idea?
+###  Have an Idea?
 
 [Start a discussion](https://github.com/anon-public/expense_tracking/discussions) or [open a feature request](https://github.com/anon-public/expense_tracking/issues/new?template=feature_request.md). We read everything.
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
-Expent is optimized for deployment on **[Vercel](https://vercel.com/)** — the makers of Next.js.
+Expent is optimized for deployment on **[Vercel](https://vercel.com/)**.
 
 ### Deploy in One Click
 
@@ -463,7 +462,7 @@ Remember to add all environment variables from `.env.local` to your Vercel proje
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
