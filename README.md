@@ -17,31 +17,27 @@
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge)]()
 
 ---
-
-
-> *"Finally, an expense tracker that doesn't feel like filling out a tax form."*
 </div>
----
 
 ## 📖 Table of Contents
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Tech Stack](#️-tech-stack)
-- [ Project Structure](#-project-structure)
-- [ Getting Started](#️-getting-started)
-- [ Authentication](#-authentication)
-- [ Pages & Components](#️-pages--components)
-- [ AI-Powered Features (Coming Soon)](#-ai-powered-features-coming-soon)
-- [ Roadmap](#️-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Authentication](#authentication)
+- [Pages & Components](#pages--components)
+- [AI-Powered Features (Coming Soon)](#ai-powered-features-coming-soon)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-##  Overview
+## Overview
 
-**Expent** is a modern, full-stack SaaS expense tracking web application designed to give individuals and teams complete clarity over their finances.
+**Expent** is a modern, full stack SaaS expense tracking web application designed to give individuals and teams complete clarity over their finances.
 
 Built on a **React + Next.js** foundation with **Clerk** for seamless authentication, _Expent_ currently delivers a clean, fast, and intuitive expense management experience. But we're not stopping there.
 
@@ -50,13 +46,13 @@ We're actively engineering a powerful **AI layer** that will transform Expent fr
 
 ---
 
-##  Features
+## Features
 
-###  Currently Available
+### Currently Available
 
 | Feature | Description |
 |---|---|
-|  **Landing Page** | Polished, conversion-optimized marketing page with clear CTAs |
+|  **Landing Page** | Polished, conversion optimized marketing page with clear CTAs |
 |  **Secure Auth** | One-click sign-up/sign-in via Clerk (Google, GitHub, Email) |
 |  **Expense Dashboard** | Clean overview of your spending at a glance |
 |  **Add & Manage Expenses** | Quickly log expenses with categories, dates, and description |
@@ -77,21 +73,21 @@ We're actively engineering a powerful **AI layer** that will transform Expent fr
 
 ```
 React 19          — UI library powering every interaction
-Next.js 15        — Full-stack framework with App Router
-Tailwind CSS      — Utility-first styling for rapid UI development
+Next.js 15        — Full stack framework with App Router
+Tailwind CSS      — Utility first styling for rapid UI development
 Clerk             — Authentication & user management
 ```
 
-### 🤖 Incoming: AI Layer *(in active development)*
+### Incoming: AI Layer *(in active development)*
 
 ```
-Anthropic Claude  — Conversational AI & financial insights engine
+Anthropic Claude/Gemini Flash 2.5  — Conversational AI & financial insights engine
 Vercel AI SDK     — Streaming AI responses in the UI
 ```
 
 ---
 
-## 📁 Project Structure
+## Project Structure 
 
 ```
 expense_tracking/
@@ -136,7 +132,7 @@ expense_tracking/
 │
 ├── .gitignore
 ├── eslint.config.mjs
-├── middleware.ts                  ← Clerk auth middleware
+├── middleware.ts                 
 ├── next.config.ts
 ├── package.json
 ├── package-lock.json
@@ -193,7 +189,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 # ─── AI Layer (Coming Soon) ─────────────────────────────────
-# ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxx
+# AI_Model_API_KEY=sk-ant-xxxxxxxxxxxx
 ```
 
 ### 4. Run the Development Server
@@ -202,7 +198,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the SpendSense landing page. 
+Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the Expent landing page. 
 
 ### 5. Build for Production
 
@@ -348,7 +344,7 @@ A beautifully formatted digest landing in your inbox every Monday your spending 
 
 ---
 
-###  AI Architecture (Planned)
+###  AI Architecture
 
 ```
 User Input (Chat / Voice)
@@ -357,7 +353,7 @@ User Input (Chat / Voice)
   Next.js API Route
         │
         ▼
-  Anthropic Claude API
+  Anthropic Claude API/Gemini Flash 2.5
   (claude-sonnet-4)
         │
         ├──→ Tool: query_expenses()
