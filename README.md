@@ -431,11 +431,11 @@ git push origin feature/your-feature-name
 
 ###  Found a Bug?
 
-[Open an issue](https://github.com/anon-public/expense_tracking/issues/new?template=bug_report.md) with steps to reproduce, expected behavior, and screenshots if possible.
+[Open an issue](https://github.com/YOURUSERNAME/expense_tracking/issues/new?template=bug_report.md) with steps to reproduce, expected behavior, and screenshots if possible.
 
 ###  Have an Idea?
 
-[Start a discussion](https://github.com/anon-public/expense_tracking/discussions) or [open a feature request](https://github.com/anon-public/expense_tracking/issues/new?template=feature_request.md). We read everything.
+[Start a discussion](https://github.com/anon-public/expense_tracking/discussions) or [open a feature request](https://github.com/YOURUSERNAME/expense_tracking/issues/new?template=feature_request.md). We read everything.
 
 ---
 
@@ -445,7 +445,7 @@ Expent is optimized for deployment on **[Vercel](https://vercel.com/)**.
 
 ### Deploy in One Click
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/anon-public/expense_tracking/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOURUSERNAME/expense_tracking/)
 
 ### Manual Deployment
 
